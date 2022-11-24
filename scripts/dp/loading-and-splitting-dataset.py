@@ -44,17 +44,17 @@ print(LABELS)
 training_data = []
 
 def create_training_data():
-    for category in LABELS:  # do dogs and cats
+    for category in LABELS:
 
-        path = os.path.join(DATADIR,category)  # create path to dogs and cats
-        class_num = LABELS.index(category)  # get the classification  (0 or a 1). 0=dog 1=cat
+        path = os.path.join(DATADIR,category)
+        class_num = LABELS.index(category)
 
-        for img in tqdm(os.listdir(path)):  # iterate over each image per dogs and cats
+        for img in tqdm(os.listdir(path)):
             try:
-                img_array = cv2.imread(os.path.join(path,img) ,cv2.IMREAD_GRAYSCALE)  # convert to array
-                new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))  # resize to normalize data size
-                training_data.append([new_array, class_num])  # add this to our training_data
-            except Exception as e:  # in the interest in keeping the output clean...
+                img_array = cv2.imread(os.path.join(path,img) ,cv2.IMREAD_GRAYSCALE)
+                new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE))
+                training_data.append([new_array, class_num])
+            except Exception as e:
                 print("erro")
                 pass
             #except OSError as e:
