@@ -26,8 +26,6 @@ DATASET_DIRECTORY = r'C:\Users\daniela\OneDrive\Documents\geral\pibic\digits'
 LABELS = []
 IMG_SIZE = 28
 
-DATADIR = r'C:\Users\daniela\OneDrive\Documents\geral\pibic\digits'
-CATEGORIES = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 
 
