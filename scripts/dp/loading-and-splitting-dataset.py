@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[41]:
 
 
 import numpy as np
@@ -21,7 +20,6 @@ from sklearn.svm import SVC
 from sklearn.neural_network import MLPClassifier
 
 
-# In[59]:
 
 
 DATASET_DIRECTORY = r'C:\Users\daniela\OneDrive\Documents\geral\pibic\digits'
@@ -32,7 +30,6 @@ DATADIR = r'C:\Users\daniela\OneDrive\Documents\geral\pibic\digits'
 CATEGORIES = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 
-# In[60]:
 
 
 # ARRAY DE LABELS BASEADO NO NOME DAS PASTAS
@@ -42,7 +39,6 @@ for dir_name in range(len(os.listdir(DATASET_DIRECTORY))):
 print(LABELS)
 
 
-# In[61]:
 
 
 training_data = []
@@ -71,7 +67,6 @@ create_training_data()
 print(len(training_data))
 
 
-# In[70]:
 
 
 # SEPARANDO IMG E LABEL
@@ -88,7 +83,6 @@ for features, label in training_data:
 x = np.array(x).reshape(-1, IMG_SIZE, IMG_SIZE, 1)
 
 
-# In[71]:
 
 
 # SALVAR DATASET
@@ -102,17 +96,10 @@ pickle.dump(y, pickle_out)
 pickle_out.close()
 
 
-# In[72]:
 
 
 # CARREGAR DATASET
 
 pickle_in = open('x.pickle', 'rb')
 x = pickle.load(pickle_in)
-
-
-# In[ ]:
-
-
-
 
