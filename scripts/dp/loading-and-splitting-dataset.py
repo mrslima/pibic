@@ -22,7 +22,7 @@ from sklearn.neural_network import MLPClassifier
 
 
 
-DATASET_DIRECTORY = r'C:\Users\daniela\OneDrive\Documents\geral\pibic\digits'
+DATASET_DIRECTORY = r'..\pibic\digits'
 LABELS = []
 IMG_SIZE = 28
 
