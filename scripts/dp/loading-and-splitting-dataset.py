@@ -29,7 +29,6 @@ IMG_SIZE = 28
 
 
 
-
 # ARRAY DE LABELS BASEADO NO NOME DAS PASTAS
 for dir_name in range(len(os.listdir(DATASET_DIRECTORY))):
     LABELS.append(os.listdir(DATASET_DIRECTORY)[dir_name])
@@ -44,7 +43,7 @@ training_data = []
 def create_training_data():
     for category in LABELS:
 
-        path = os.path.join(DATADIR,category)
+        path = os.path.join(DATASET_DIRECTORY,category)
         class_num = LABELS.index(category)
 
         for img in tqdm(os.listdir(path)):
