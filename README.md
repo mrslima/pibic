@@ -1,4 +1,4 @@
-# pibic
+# Repositório PIBIC
 [SegTHOR: Segmentation of Thoracic Organs at Risk in CT images](https://arxiv.org/pdf/1912.05950.pdf)
 
 
