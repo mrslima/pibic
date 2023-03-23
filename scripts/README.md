@@ -356,10 +356,10 @@ image_dir = 'images/'
 label_dir = 'labels/'
 train_masks = 'train/masks/'
 train_images = 'train/images/'
-test_masks = 'test/masks'
+test_masks = 'test/masks/'
 test_images = 'test/images/'
-val_masks = 'val/masks'
-val_images = 'val/images'
+val_masks = 'val/masks/'
+val_images = 'val/images/'
 
 
 def train_test_val_splitter(image_dir, label_dir,
@@ -373,7 +373,7 @@ def train_test_val_splitter(image_dir, label_dir,
     label_files = os.listdir(label_dir)
     
     while True:
-        seed = randint(0, math.floor(len(image_files)*train_qtty))
+        seed = randint(0, math.floor(len(image_files)*train_qtty)-len(os.listdir(train_images)))
         actual_image = image_files[seed]
         actual_label = label_files[seed]
         
@@ -387,7 +387,7 @@ def train_test_val_splitter(image_dir, label_dir,
             break
     
     while True:
-        seed = randint(0, math.floor(len(image_files)*test_qtty))
+        seed = randint(0, math.floor(len(image_files)*test_qtty)-len(os.listdir(test_images)))
         actual_image = image_files[seed]
         actual_label = label_files[seed]
         
@@ -397,7 +397,7 @@ def train_test_val_splitter(image_dir, label_dir,
         label = Image.open(label_dir + actual_label)
         label.save(test_masks + actual_label)
         
-        if len(os.listdir(test_images)) == math.floor(len(image_files)*test_qtty):
+        if len(os.listdir(test_images)) == math.floor(len(image_files)*test_qtty-len(os.listdir(val_images))):
             break
     
     while True:
