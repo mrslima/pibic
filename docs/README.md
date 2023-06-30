@@ -1,1 +1,1 @@
-# [PDF Relatório Final - INTRO]([http://sgithub.com/mrslima/pibic/blob/main/docs/Relat%C3%B3rio_Parcial_PIBIC.pdf](https://github.com/mrslima/pibic/blob/main/docs/Relat%C3%B3rio_Final_PIBIC.pdf)https://github.com/mrslima/pibic/blob/main/docs/Relat%C3%B3rio_Final_PIBIC.pdf)
+# [PDF Relatório Final - INTRO](https://github.com/mrslima/pibic/blob/main/docs/Relat%C3%B3rio_Final_PIBIC.pdf)
